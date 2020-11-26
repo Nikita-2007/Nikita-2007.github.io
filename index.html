@@ -9,7 +9,7 @@
 <script type="text/javascript">
 var snake=document.getElementById("snake"), ctx=snake.getContext("2d"), xS=snake.width, yS=snake.height,
 qS=25, rS=0, tS=1000/15, xF, yF,
-imgS=new Image(), imgF=new Image(), pattern, audFruit=new Audio(), audFeil=new Audio(),
+imgS=new Image(), imgF=new Image(), audFruit=new Audio(), audFeil=new Audio(),
 xZarr=[] , yZarr=[], arr, xZ=xS/2, yZ=yS/2, vK, xK=0, yK=0; imgS.src="3eml.png";
 imgF.src="eda.png"; audFruit.src="eda.ogg"; audFeil.src="fell.ogg"; ctx.textBaseline="middle"; ctx.textAlign="center";
 fruit();
@@ -26,8 +26,7 @@ function  feil() {
 	ctx.fillStyle="black"; ctx.fillRect(0, 0, xS, yS); audFeil.play();
 	xZarr.length=1; yZarr.length=1; rS=0;};
 setInterval(function() {
-pattern=ctx.createPattern(imgS, "repeat");
-ctx.fillStyle=pattern;
+ctx.fillStyle=ctx.createPattern(imgS, "repeat");
 ctx.fillRect(0, 0, xS, yS);
 ctx.drawImage(imgF, xF+qS/2-15, yF+qS/2-17);
 xZ=xZ+xK; if (xZ >= xS) xZ=0; if (xZ < 0) xZ=xS-qS;
