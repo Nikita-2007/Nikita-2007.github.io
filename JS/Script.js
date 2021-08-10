@@ -1,20 +1,20 @@
+var nt = "img/notepad_plus_plus.png", bat = "img/Bat.png"
 var listProg = [
-    ["Hello World!", "2018", "img/game1.png", "Моя самая первая программ"],
-    ["re", "2018", "img/game1.png", "e"],
-    ["jz", "2018", "img/game1.png", "g"],
-    ["df", "2018", "img/game1.png", "q"],
+    ["Hello World!", "2018", "Моя самая первая программа", "img/game1.png", nt, bat],
+    ["Hello World!", "2018", "Моя самая первая программа", "img/game1.png", nt, bat],
 ];
 
-var programs = document.getElementById("programs");
+var section = document.getElementById("programs");
 
-var toAdd = document.createDocumentFragment();
+for(let i of listProg) {
+    console.log(i);
+    let block = document.createElement('article');
+    block.className = "program";
+    let img = document.createElement('img');
+    img.className = "program-img";
+    img.src = i[4];
+    block.appendChild(img);
 
-for(var i in listProg) {
-    var block = document.createElement('div');
-    block.id = "myid"
-    block.className = "program"
-    block.textContent = i[0];
-    toAdd.appendChild(block);
+    block.textContent = i[1];
+    section.appendChild(block);
 };
-
-programs.appendChild(toAdd);
