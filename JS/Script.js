@@ -11,9 +11,10 @@ var listProg = [
     ["Hello World!", "2018", "Моя самая первая программа", "img/game1.png", nt, bat],
     ["Hello World!", "2018", "Моя самая первая программа", "img/game1.png", nt, bat],
     ["Hello World!", "2018", "Моя самая первая программа", "img/game1.png", nt, bat],
+    ["Hello World!", "2018", "Моя самая первая программа", "img/game1.png", nt, bat],
 ];
 
-var section = document.getElementById("primer");
+var section = document.getElementById("programs");
 
 for(let i of listProg) {
     let block = document.createElement('article');
@@ -35,10 +36,10 @@ for(let i of listProg) {
     year.textContent = i[1]
     block.appendChild(year);
 
-    let leng = document.createElement('img');
-    leng.className = "pr-leng logo";
-    leng.src = i[5]
-    block.appendChild(leng);
+    let lang = document.createElement('img');
+    lang.className = "pr-lang logo";
+    lang.src = i[5]
+    block.appendChild(lang);
 
     let text = document.createElement('div');
     text.className = "pr-text";

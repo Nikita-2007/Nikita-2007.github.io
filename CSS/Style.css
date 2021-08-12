@@ -1,10 +1,9 @@
 body {
-    background-color:lightsteelblue;
+    margin: 0;
 }
 
-section {
-    display: flex;
-    margin-left: 70px;
+main {
+    margin: 0 5%;
 }
 
 #header-text{
@@ -23,43 +22,90 @@ section {
     color: #787DFA;
 }
 
-.programs {
-    margin: 0px;
+h2 {
+    font-family: "Abel", cursive;
+    font-size: 72px;
+    line-height: 98px;
+    text-align: center;
+    color: #28C657;
+
+    background: #293974;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.88);
+    border-radius: 32px;
+    margin: 1em 5em 1em 5em;
+}
+
+section {
+    display: grid;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+#programs {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4em;
 }
 
 .program {
-    width: 615px;
-    height: 432px;
-    margin: 20px;
-
+    height: 0;
+    position: relative;
+    padding-top: 100%;
     filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.88));
 }
 
-#program-text{
+.pr-bgimg {
     position: absolute;
-    width: 162px;
-    height: 35px;
-    left: 28px;
-    bottom: 84px;
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: blur(2px);
+}
+
+.pr-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    background-color: rgba(0, 8, 16, 0.75);
+    filter: sepia(100%);
+
+    border-radius: 8px;
+}
+
+.pr-year {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 1.2em;
+    border-radius: 1em;
+
     font-family: 'Abel', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
     line-height: 46px;
-    
     color: #FFFFFF;
     
-    text-shadow: 0px 0px 5px rgba(77, 77, 77, 0.92);
+    text-shadow: 0px 0px 5px rgba(77, 77, 77, 0.88);
 }
 
-#program-podtext{
+.pr-lang {
     position: absolute;
-    width: 366px;
-    left: 29px;
-    left: 28px;
-    bottom: 55px;
-    
+    top: 4em;
+    right: 0.5em;
+    filter: drop-shadow(0px 0px 5px rgba(77, 77, 77, 0.88));
+}
+
+.pr-text {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+
     font-family: 'Abel', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -71,64 +117,31 @@ section {
     text-shadow: 0px 0px 5px rgba(77, 77, 77, 0.88);
 }
 
-.program-img{
+.pr-name {
     position: absolute;
-    width: 533px;
-    height: 365px;
-    left: calc(50% - 399px/2 - 100px);
-    top: calc(50% - 274px/2);
-    filter: sepia(100%);
+    top: 1em;
+    left: 1em;
+    font-size: 1.5em;
 
-    border-radius: 8px;
-}
-
-#program-data-border{
-    position: absolute;
-    width: 89px;
-    height: 44px;
-    left: 410px;
-    top: 105px;
-    
-    border: 1px solid #FFFFFF;
-    box-sizing: border-box;
-    filter: drop-shadow(0px 0px 5px rgba(77, 77, 77, 0.25));
-    border-radius: 18px;
-}
-
-#program-data{
-    position: absolute;
-    width: 74px;
-    height: 46px;
-    left: 418px;
-    top: 105px;
-    
     font-family: 'Abel', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
     line-height: 46px;
+    
     color: #FFFFFF;
     
-    text-shadow: 0px 0px 5px rgba(77, 77, 77, 0.88);
-}
-.program-language{
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    left: 30px;
-    bottom: -6px;
-    
-    background: url(Bat.png);
-    filter: drop-shadow(0px 0px 5px rgba(77, 77, 77, 0.88));
+    text-shadow: 0px 0px 5px rgba(77, 77, 77, 0.92);
 }
 
-.program-prog{
+.logo {
+    width: 48px;
+    height: 48px;
+}
+
+.pr-tool {
     position: absolute;
-    width: 64px;
-    height: 64px;
-    left: 108px;
-    bottom: -2px;
-    
-    background: url(notepad_plus_plus.png);
+    top: 8em;
+    right: 0.5em;
     filter: drop-shadow(0px 0px 5px rgba(87, 87, 87, 0.25));
 }
