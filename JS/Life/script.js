@@ -45,14 +45,7 @@ btnClear.onclick = () => {
 //Рандом
 btnRandom.onclick = () => {
     focus = true;
-    buffer = arrCopy(arr);
-    for(let i=1; i<row-1; i++){
-        for(let j=1; j<col-1; j++){
-            if (Math.random()>=0.61803)
-                buffer[i][j] = true;
-        };
-    };
-    arr = arrCopy(buffer);
+    arr = arrNew(1);
 }
 
 //Отслежывание клика
@@ -64,7 +57,6 @@ onclick = (e) => {
     }
     focus = false;
 }
-
 
 //Цикл анимации
 setInterval(() => {
@@ -85,12 +77,15 @@ setInterval(() => {
 
 //Создаём массив клеток
 arr = arrNew();
-function arrNew(){
+function arrNew(param = 0){
     let arr = [];
     for(let i=0; i<row; i++){
         arr[i] = [];
         for(let j=0; j<col; j++){
-            arr[i][j] = false;
+            if (param)
+                arr[i][j] = Math.random()>0.61803;
+            else
+                arr[i][j] = false;
         };
     };
     return arr;
