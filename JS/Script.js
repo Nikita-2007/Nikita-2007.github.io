@@ -64,3 +64,16 @@ for(let i of listProg) {
     tool.src = i[4]
     block.appendChild(tool);
 };
+
+var up = document.getElementById("up");
+up.onclick = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0
+}
+
+window.onscroll = () => {
+    if (document.body.scrollTop > 512 || document.documentElement.scrollTop > 512)
+        up.style.display = "block";
+    else
+    up.style.display = "none";
+}
