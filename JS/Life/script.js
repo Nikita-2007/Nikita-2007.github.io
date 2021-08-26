@@ -9,7 +9,7 @@ var canvas = document.getElementById("canvas"),
     btnClear = document.getElementById("clear"),
     btnRandom = document.getElementById("random"),
     speed = 100,
-    size = 32,
+    size = 16,
     width,
     height,
     row,
@@ -125,7 +125,7 @@ function update(){
 //Отрисовка линий
 function drawLines(){
     ctx.lineWidht = 0.25;
-    ctx.strokeStyle="gray"
+    ctx.strokeStyle="DimGrey"
     //Гаризантальные линии
     ctx.beginPath();
     for(let i=0; i<height; i+=size){
@@ -153,7 +153,7 @@ function drawCell(){
                 ctx.fillStyle = "lime"
                 ctx.beginPath();
                 //ctx.arc(i*size+size/2, j*size+size/2, size/2-1, 0, 2*Math.PI);
-                ctx.fillRect(i*size+5, j*size+5, size-10, size-10);
+                ctx.fillRect(i*size+3, j*size+3, size-6, size-6);
                 ctx.fill();
                 ctx.closePath();
             };

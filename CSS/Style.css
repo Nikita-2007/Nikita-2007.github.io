@@ -39,10 +39,20 @@ h3 {
     font-family: "Alegreya";
     font-style: normal;
     font-weight: normal;
-    font-size: 64px;
+    font-size: 32px;
     line-height: 87px;
 
     color: #000000;
+}
+
+h4 {
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 87px;
+
+    color: #FFFFFF;
 }
 
 section {
@@ -178,6 +188,13 @@ img {
 #icon {
     grid-template-columns: repeat(9, 10em);
     justify-content: center; 
+}
+
+#footer {
+    padding: 3em;
+    background-color: black;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 10fr 5fr;
 }
 
 #up{
