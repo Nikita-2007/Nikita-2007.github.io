@@ -76,6 +76,12 @@ img {
     filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.88));
 }
 
+.program:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
 .pr-bgimg {
     position: absolute;
     top: 50%;
@@ -154,18 +160,36 @@ img {
 }
 
 .logo {
-    width: 56px;
-    height: 56px;
-}
-
-.big-logo {
-    width: 256px;
-    height: 256px;
+    width: 4em;
+    height: 4em;
 }
 
 .medium-logo {
-    width: 128px;
-    height: 128px;
+    width: 9em;
+    height: 9em;
+}
+
+.big-logo {
+    width: 18em;
+    height: 18em;
+    border-radius: 5px;
+}
+
+.logo:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.medium-logo:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.big-logo:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .pr-tool {
@@ -173,6 +197,17 @@ img {
     bottom: 0.5em;
     left: 2em;
     filter: drop-shadow(0px 0px 5px rgba(87, 87, 87, 0.25));
+}
+
+#webs{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
+}
+
+.web:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #game {
@@ -195,6 +230,30 @@ img {
     background-color: black;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 10fr 5fr;
+}
+
+.menuText {
+    color: #28C657;
+    text-decoration: none;
+}
+
+#menu {
+    position: fixed;
+    z-index: 1;
+    right: -13em;
+    bottom: 50%;
+    height: 8em;
+    width: 15em;
+    color: #28C657;
+
+    background: #293974;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.88);
+    border-radius: 8px;
+    transition: right 0.5s cubic-bezier(0, 0, 1, 1) 0ms;
+}
+
+#menu:hover {
+    right: 0em;
 }
 
 #up{
